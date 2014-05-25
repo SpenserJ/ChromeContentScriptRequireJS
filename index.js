@@ -6,11 +6,19 @@ var requireLocal = cajon.config({
 delete cajonBaseURL;
 
 requireLocal([
-    'debug'
-  ], function (debug) {
+    'debug',
+    'events',
+  ], function (
+    debug,
+    events
+  ) {
 
-  // Initialize any modules
+  // Initialize any dependencies
+
+  // Give our debug library a message to prefix to the logs
   debug.initialize('Content Script RequireJS');
 
+  // The extension core is initialized
   debug.info('is ready');
+  events.emitEvent('ready');
 });

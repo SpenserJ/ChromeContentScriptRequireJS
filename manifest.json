@@ -1,0 +1,18 @@
+{
+  "name": "Content Script RequireJS",
+  "description": "A template for Content Script Extensions using RequireJS",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": ["http://example.com/*"],
+      "js": ["injector.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "js/*",
+    "lib/*",
+    "index.js",
+    "config.js"
+  ],
+  "manifest_version": 2
+}

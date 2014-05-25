@@ -1,5 +1,13 @@
 var requireLocal = cajon.config({
   baseUrl: cajonBaseURL + 'js',
+  paths: {
+    'lib': '../lib',
+    'config': '../config',
+    jquery: [
+      'http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min',
+      'lib/jquery'
+    ]
+  }
 });
 
 // Cleanup our Cajon config
